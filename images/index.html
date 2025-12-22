@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Charity</title>
+
+  <style>
+    /* ===== GENERAL ===== */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      font-weight: bold;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: #e8f5e9;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      background: #ff9800;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* ===== PROGRAMS ===== */
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .program {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+
+    /* ===== FORMS ===== */
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container">
+    <nav>
+      <h2>Global Charity</h2>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#donate">Donate</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <h1>Supporting Vulnerable Communities Worldwide</h1>
+  <p>Together, we can bring hope, care, and opportunity to those in need.</p>
+  <button onclick="location.href='#donate'">Donate Now</button>
+  <button onclick="location.href='#contact'">Join Us</button>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      We are a global charity dedicated to supporting vulnerable groups including
+      children, women, refugees, the elderly, and marginalized communities.
+    </p>
+    <p>
+      Our mission is to provide education, healthcare, food, shelter, and empowerment
+      programs to create long-term positive change.
+    </p>
+  </div>
+</section>
+
+<!-- ===== PROGRAMS ===== -->
+<section id="programs">
+  <div class="container">
+    <h2>Our Programs</h2>
+
+    <div class="programs">
+      <div class="program">
+        <h3>Education Support</h3>
+        <p>Scholarships, school supplies, and access to quality education.</p>
+      </div>
+
+      <div class="program">
+        <h3>Healthcare Assistance</h3>
+        <p>Medical outreach, basic treatment, and health awareness programs.</p>
+      </div>
+
+      <div class="program">
+        <h3>Food & Shelter</h3>
+        <p>Emergency food distribution and temporary shelter support.</p>
+      </div>
+
+      <div class="program">
+        <h3>Empowerment Programs</h3>
+        <p>Skills training and economic empowerment initiatives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DONATE ===== -->
+<section id="donate">
+  <div class="container">
+    <h2>Donate</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <select required>
+        <option value="">Select Amount</option>
+        <option>$10</option>
+        <option>$25</option>
+        <option>$50</option>
+        <option>$100</option>
+      </select>
+      <textarea rows="4" placeholder="Optional Message"></textarea>
+      <button type="submit">Donate Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>&copy; 2025 Global Charity. All Rights Reserved.</p>
+  <p>Facebook | Twitter | Instagram</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Making a Difference for Vulnerable Communities Worldwide">
+  <title>Global Charity</title>
+  <style>
+    /* ===== GENERAL STYLES ===== */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 20px 0;
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?charity,community') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3em; margin-bottom: 20px; }
+    .hero a {
+      background: #ff9800;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 60px 0; }
+    h2 { text-align: center; margin-bottom: 40px; color: #4CAF50; }
+
+    /* About Section */
+    .about p { max-width: 800px; margin: 0 auto 20px auto; text-align: center; }
+
+    /* Programs Section */
+    .programs { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
+    .program { flex: 1 1 250px; border: 1px solid #ddd; padding: 20px; border-radius: 10px; text-align: center; }
+    .program h3 { margin-top: 10px; color: #333; }
+
+    /* Donate Section */
+    .donate form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .donate input, .donate select, .donate button, .donate textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+      font-size: 1em;
+    }
+    .donate button {
+      background: #4CAF50;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Blog Section */
+    .blog-posts { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; }
+    .post { flex: 1 1 300px; border: 1px solid #ddd; padding: 20px; border-radius: 10px; }
+
+    /* Contact Section */
+    .contact form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      header nav { flex-direction: column; }
+      .programs, .blog-posts { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><h2>Global Charity</h2></div>
+        <div class="menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#donate">Donate</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Making a Difference Worldwide</h1>
+      <a href="#donate">Donate Now</a>
+      <a href="#volunteer">Join Us</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Our mission is to support vulnerable communities across the globe by providing education, healthcare, food, shelter, and empowerment programs.</p>
+      <p>We envision a world where everyone has access to basic needs, opportunities to grow, and hope for a better future.</p>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <h2>Our Programs</h2>
+      <div class="program">
+        <img src="https://source.unsplash.com/300x200/?education" alt="Education Program">
+        <h3>Education Support</h3>
+        <p>Providing scholarships, school supplies, and learning resources to children in need.</p>
+      </div>
+      <div class="program">
+        <img src="https://source.unsplash.com/300x200/?healthcare" alt="Healthcare Program">
+        <h3>Healthcare</h3>
+        <p>Organizing medical camps, vaccines, and healthcare awareness campaigns.</p>
+      </div>
+      <div class="program">
+        <img src="https://source.unsplash.com/300x200/?food,shelter" alt="Food and Shelter Program">
+        <h3>Food & Shelter</h3>
+        <p>Providing emergency food supplies and temporary shelter to vulnerable populations.</p>
+      </div>
+      <div class="program">
+        <img src="https://source.unsplash.com/300x200/?training" alt="Empowerment Program">
+        <h3>Empowerment Programs</h3>
+        <p>Offering vocational training and skills development to improve livelihoods.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section class="donate" id="donate">
+    <div class="container">
+      <h2>Donate</h2>
+      <form>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <select name="amount" required>
+          <option value="">Select Donation Amount</option>
+          <option value="10">$10</option>
+          <option value="25">$25</option>
+          <option value="50">$50</option>
+          <option value="100">$100</option>
+        </select>
+        <textarea name="message" placeholder="Optional message" rows="4"></textarea>
+        <button type="submit">Donate Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <h2>Latest News</h2>
+      <div class="blog-posts">
+        <div class="post">
+          <h3>Volunteer Story: Changing Lives</h3>
+          <p>Our volunteers recently visited remote communities to provide education and healthcare support...</p>
+        </div>
+        <div class="post">
+          <h3>Food Drive Success</h3>
+          <p>We successfully distributed 500 food packages to families in need last month.</p>
+        </div>
+        <div class="post">
+          <h3>New Empowerment Program Launched</h3>
+          <p>We have started a new vocational training initiative to help youth learn practical skills for employment.</p>
+        </div>

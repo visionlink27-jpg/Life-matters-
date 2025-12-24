@@ -4,52 +4,188 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Global Charity</title>
-  <style>
-    /* General styles */
-    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; }
-    a { text-decoration:none; color:inherit; }
-    header { background:#2e7d32; color:white; padding:20px; }
-    nav { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center; }
-    nav a { margin:5px 10px; font-weight:bold; color:white; }
-    .hero { background:#e8f5e9; text-align:center; padding:60px 20px; }
-    .hero button { margin:10px; padding:12px 25px; border:none; background:#ff9800; color:white; border-radius:5px; cursor:pointer; }
-    section { padding:60px 20px; }
-    h1,h2 { color:#2e7d32; text-align:center; }
-    .container { max-width:1100px; margin:auto; }
-    .programs { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .program { border:1px solid #ddd; padding:20px; border-radius:10px; background:#fafafa; text-align:center; }
-    form { max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px; }
-    input,textarea,select,button { padding:10px; font-size:16px; }
-    button { background:#2e7d32; color:white; border:none; cursor:pointer; }
-    footer { background:#333; color:white; text-align:center; padding:20px; }
 
-    /* Responsive images */
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+  <style>
+    /* RESET & GENERAL */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
     }
 
-    /* Program card images specific */
+    h1, h2, h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* TOP HERO IMAGE */
+    .hero-banner {
+      width: 100%;
+      height: 450px;
+      background: url("images/hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    .hero-text h1 {
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text button {
+      padding: 12px 25px;
+      background: #ff9800;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* HEADER / NAV */
+    header {
+      background: #2e7d32;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      margin: 5px 10px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 0;
+    }
+
+    /* PROGRAMS */
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .program {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fafafa;
+      overflow: hidden;
+      text-align: center;
+    }
+
     .program img {
       width: 100%;
-      max-height: 200px;
+      height: 200px;
       object-fit: cover;
-      border-radius: 8px;
     }
 
-    @media(max-width:600px){ nav { flex-direction:column; } }
+    .program div {
+      padding: 20px;
+    }
+
+    /* FORMS */
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    form button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero-banner {
+        height: 300px;
+      }
+
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
+
 <body>
+
+<!-- TOP IMAGE -->
+<div class="hero-banner">
+  <div class="hero-text">
+    <h1>Supporting Vulnerable Communities Worldwide</h1>
+    <p>Together, we bring hope, care, and opportunity</p>
+    <button onclick="location.href='#donate'">Donate Now</button>
+  </div>
+</div>
 
 <header>
   <div class="container">
     <nav>
       <h2>Global Charity</h2>
       <div>
-        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#programs">Programs</a>
         <a href="#donate">Donate</a>
@@ -59,18 +195,13 @@
   </div>
 </header>
 
-<section class="hero" id="home">
-  <h1>Supporting Vulnerable Communities Worldwide</h1>
-  <p>Together, we can bring hope, care, and opportunity to those in need.</p>
-  <button onclick="location.href='#donate'">Donate Now</button>
-  <button onclick="location.href='#contact'">Join Us</button>
-</section>
-
 <section id="about">
   <div class="container">
     <h2>About Us</h2>
-    <p>We are a global charity dedicated to supporting vulnerable groups including children, women, refugees, the elderly, and marginalized communities.</p>
-    <p>Our mission is to provide education, healthcare, food, shelter, and empowerment programs to create long-term positive change.</p>
+    <p>
+      We are a global charity committed to supporting vulnerable groups including
+      children, women, refugees, the elderly, and marginalized communities worldwide.
+    </p>
   </div>
 </section>
 
@@ -79,19 +210,27 @@
     <h2>Our Programs</h2>
     <div class="programs">
       <div class="program">
-        <img src="images/children.jpg" alt="Helping children">
-        <h3>Education Support</h3>
-        <p>Scholarships, school supplies, and access to quality education.</p>
+        <img src="images/children.jpg" alt="Children support">
+        <div>
+          <h3>Education Support</h3>
+          <p>Access to education, supplies, and scholarships.</p>
+        </div>
       </div>
+
       <div class="program">
         <img src="images/healthcare.jpg" alt="Healthcare support">
-        <h3>Healthcare Assistance</h3>
-        <p>Medical outreach, basic treatment, and health awareness programs.</p>
+        <div>
+          <h3>Healthcare Assistance</h3>
+          <p>Medical outreach and health awareness programs.</p>
+        </div>
       </div>
+
       <div class="program">
-        <img src="images/education.jpg" alt="Education program">
-        <h3>Empowerment Programs</h3>
-        <p>Skills training and economic empowerment initiatives.</p>
+        <img src="images/education.jpg" alt="Empowerment">
+        <div>
+          <h3>Empowerment Programs</h3>
+          <p>Skills training and economic empowerment.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -110,7 +249,7 @@
         <option>$50</option>
         <option>$100</option>
       </select>
-      <textarea rows="4" placeholder="Optional Message"></textarea>
+      <textarea rows="4" placeholder="Message (optional)"></textarea>
       <button type="submit">Donate Now</button>
     </form>
   </div>
@@ -130,7 +269,6 @@
 
 <footer>
   <p>&copy; 2025 Global Charity. All Rights Reserved.</p>
-  <p>Facebook | Twitter | Instagram</p>
 </footer>
 
 </body>

@@ -3,190 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Charity</title>
+  <title>United in Christ International Church</title>
 
   <style>
-    /* RESET & GENERAL */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
+    /* GENERAL STYLES */
+    body { margin:0; font-family: Arial, sans-serif; color:#333; line-height:1.6; }
+    h1,h2,h3 { color:#2e7d32; margin-bottom:10px; }
+    a { text-decoration:none; color:inherit; }
+    .container { max-width:1100px; margin:auto; padding:20px; }
 
-    h1, h2, h3 {
-      color: #2e7d32;
-      margin-bottom: 10px;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    /* TOP HERO IMAGE */
-    .hero-banner {
-      width: 100%;
-      height: 450px;
-      background: url("images/hero.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
+    /* TOP BANNER IMAGE */
+    .top-banner {
+      width:100%;
+      height:400px;
+      background: url("images/top-banner.jpg") center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
       position: relative;
     }
-
-    .hero-banner::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
+    .top-banner::after {
+      content:"";
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.3);
+    }
+    .banner-text {
+      position:relative;
+      z-index:1;
+      color:white;
+      font-size:2rem;
+      font-weight:bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
 
-    .hero-text {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-    }
+    /* HERO SECTION */
+    .hero { background:#e8f5e9; text-align:center; padding:60px 20px; }
+    .hero button { margin:10px; padding:12px 25px; border:none; background:#ff9800; color:white; border-radius:5px; cursor:pointer; }
 
-    .hero-text h1 {
-      color: white;
-      font-size: 2.5rem;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-text button {
-      padding: 12px 25px;
-      background: #ff9800;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* HEADER / NAV */
-    header {
-      background: #2e7d32;
-      color: white;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      margin: 5px 10px;
-      font-weight: bold;
-      color: white;
-    }
+    /* NAVIGATION */
+    header { background:#2e7d32; color:white; }
+    nav { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    nav a { margin:5px 10px; font-weight:bold; color:white; }
 
     /* SECTIONS */
-    section {
-      padding: 60px 0;
-    }
+    section { padding:60px 0; }
 
     /* PROGRAMS */
-    .programs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .program {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background: #fafafa;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .program img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .program div {
-      padding: 20px;
-    }
+    .programs { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .program { border:1px solid #ddd; border-radius:10px; background:#fafafa; overflow:hidden; text-align:center; }
+    .program img { width:100%; height:200px; object-fit:cover; }
+    .program div { padding:20px; }
 
     /* FORMS */
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea, select, button {
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    form button {
-      background: #2e7d32;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+    form { max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px; }
+    input,textarea,select,button { padding:10px; font-size:16px; }
+    form button { background:#2e7d32; color:white; border:none; cursor:pointer; }
 
     /* FOOTER */
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+    footer { background:#333; color:white; text-align:center; padding:20px; }
 
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .hero-banner {
-        height: 300px;
-      }
+    /* RESPONSIVE IMAGES */
+    img { max-width:100%; height:auto; display:block; margin:0 auto; }
 
-      .hero-text h1 {
-        font-size: 1.8rem;
-      }
+    @media(max-width:600px){
+      .top-banner { height:250px; }
+      .banner-text { font-size:1.5rem; }
+      nav { flex-direction:column; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- TOP IMAGE -->
-<div class="hero-banner">
-  <div class="hero-text">
-    <h1>Supporting Vulnerable Communities Worldwide</h1>
-    <p>Together, we bring hope, care, and opportunity</p>
-    <button onclick="location.href='#donate'">Donate Now</button>
-  </div>
+<!-- TOPMOST IMAGE -->
+<div class="top-banner">
+  <div class="banner-text">United in Christ International Church</div>
 </div>
 
 <header>
   <div class="container">
     <nav>
-      <h2>Global Charity</h2>
+      <h2>United in Christ</h2>
       <div>
         <a href="#about">About</a>
+        <a href="#mission">Mission</a>
         <a href="#programs">Programs</a>
         <a href="#donate">Donate</a>
         <a href="#contact">Contact</a>
@@ -195,13 +98,24 @@
   </div>
 </header>
 
+<section class="hero">
+  <h1>Supporting Communities Worldwide</h1>
+  <p>Together, we bring hope, care, and opportunity</p>
+  <button onclick="location.href='#donate'">Donate Now</button>
+</section>
+
 <section id="about">
   <div class="container">
     <h2>About Us</h2>
-    <p>
-      We are a global charity committed to supporting vulnerable groups including
-      children, women, refugees, the elderly, and marginalized communities worldwide.
-    </p>
+    <p>We are a global church committed to spreading the message of faith, hope, and love while supporting vulnerable communities worldwide.</p>
+  </div>
+</section>
+
+<!-- MISSION SECTION -->
+<section id="mission">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <p>Our mission is to share the love of Christ by serving communities in need, offering hope, care, and support to those who are vulnerable, and empowering people to live with faith, purpose, and dignity.</p>
   </div>
 </section>
 
@@ -213,10 +127,9 @@
         <img src="images/children.jpg" alt="Children support">
         <div>
           <h3>Education Support</h3>
-          <p>Access to education, supplies, and scholarships.</p>
+          <p>Access to education, school supplies, and scholarships.</p>
         </div>
       </div>
-
       <div class="program">
         <img src="images/healthcare.jpg" alt="Healthcare support">
         <div>
@@ -224,12 +137,11 @@
           <p>Medical outreach and health awareness programs.</p>
         </div>
       </div>
-
       <div class="program">
         <img src="images/education.jpg" alt="Empowerment">
         <div>
           <h3>Empowerment Programs</h3>
-          <p>Skills training and economic empowerment.</p>
+          <p>Skills training and economic empowerment initiatives.</p>
         </div>
       </div>
     </div>
@@ -268,7 +180,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 Global Charity. All Rights Reserved.</p>
+  <p>&copy; 2025 United in Christ International Church. All Rights Reserved.</p>
 </footer>
 
 </body>
